@@ -24,9 +24,10 @@ class FeedDetail extends Component {
     })
   }
 
-  _renderEntries(entry:any) {
+  _renderEntries(entry:any, id) {
     return (
       <TouchableHighlight
+	      key={id}
         underlayColor="rgba(0,0,0,.1)"
         onPress={() => { this._showEntryDetails(entry) }} >
         <View style={styles.wrapper}>
@@ -42,7 +43,7 @@ class FeedDetail extends Component {
   render() {
     return (
       <ScrollView style={styles.scrollView}>
-        {this.props.entries.map((entry) => { return this._renderEntries(entry) })}
+        {this.props.entries.map((entry, i) => { return this._renderEntries(entry, i) })}
       </ScrollView>
     );
   }

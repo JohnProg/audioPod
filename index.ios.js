@@ -13,8 +13,9 @@ import {
 } from 'react-native';
 
 import HomeScreen from './App/Screens/HomeScreen';
-import NewFeed from './App/Screens/NewFeed';
+import ManualAddFeed from './App/Screens/ManualAddFeed';
 import LocalStorage from './App/Stores/LocalStorage';
+import PlusButtonImage from 'image!NavBarButtonPlus';
 
 class audioPod extends React.Component{
   constructor(props) {
@@ -38,18 +39,18 @@ class audioPod extends React.Component{
         style={styles.container}
         initialRoute={{
           component: HomeScreen,
-          title: 'RSS Feeds',
+          title: 'AudioPod',
           backButtonTitle: 'Back',
-          //rightButtonIcon: require('image!NavBarButtonPlus'),
+          rightButtonIcon: PlusButtonImage,
           onRightButtonPress: () => {
             this.refs.mainNav.navigator.push({
-              component: NewFeed,
+              component: ManualAddFeed,
               title: 'New Feed',
             });
           }
         }}
         tintColor="#FFFFFF"
-        barTintColor="#183E63"
+        barTintColor="#E91E63"
         titleTextColor="#FFFFFF"/>
     );
   }

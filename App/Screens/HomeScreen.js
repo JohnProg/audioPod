@@ -73,7 +73,7 @@ class HomeScreen extends Component {
           this.props.navigator.push ({
             component: FeedDetail,
             title: feed.title,
-            //rightButtonIcon: require('image!NavBarButtonSettings'),
+            rightButtonIcon: require('image!NavBarButtonSettings'),
             onRightButtonPress: () => {this._showFeedActionSheet(feed)},
             passProps: {
               entries: entries
@@ -116,7 +116,7 @@ class HomeScreen extends Component {
 var styles = StyleSheet.create({
   scrollView: {
     flex: 1,
-    backgroundColor: '#F5FCFF'
+    backgroundColor: '#FCE4EC'
   },
   wrapper: {
     paddingTop: 20,

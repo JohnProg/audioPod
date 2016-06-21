@@ -18,7 +18,7 @@ import {
 
 const STORAGE_KEY = '@FeedList';
 
-class NewFeed extends Component {
+class ManualAddFeed extends Component {
 
   constructor(props) {
     super(props);
@@ -96,4 +96,4 @@ var styles = StyleSheet.create({
   }
 });
 
-module.exports = NewFeed;
+module.exports = ManualAddFeed;
