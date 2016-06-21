@@ -1,0 +1,3 @@
+rootProject.name = 'audioPod'
+
+include ':app'
