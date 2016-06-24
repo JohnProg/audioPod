@@ -15,6 +15,7 @@ import {
 import HomeScreen from './App/Screens/HomeScreen';
 import ManualAddFeed from './App/Screens/ManualAddFeed';
 import LocalStorage from './App/Stores/LocalStorage';
+import DownloadedStore from './App/Stores/DownloadedStore';
 import PlusButtonImage from 'image!NavBarButtonPlus';
 
 class audioPod extends React.Component{
@@ -26,6 +27,7 @@ class audioPod extends React.Component{
   }
 
  componentWillMount() {
+    DownloadedStore.bootstrap();
     LocalStorage.bootstrap(() => this.setState({bootstrapped: true}));
   }
 

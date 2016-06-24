@@ -5,6 +5,7 @@ import Api from '../Api/RssFeedApi';
 import AppActions from '../Actions/AppActions';
 import FeedStore from '../Stores/FeedStore';
 import FeedDetail from './FeedDetail';
+import RNFS from 'react-native-fs';
 import _ from 'lodash';
 
 import {
@@ -85,12 +86,12 @@ class HomeScreen extends Component {
     });
   }
 
-  _renderFeed(feed:any) {
+  _renderFeed(feed:any, key) {
     return (
       <TouchableHighlight
         underlayColor="rgba(0,0,0,.1)"
         onPress={() => { this._showFeedDetails(feed) }}
-        key={feed.length}>
+        key={key}>
         <View style={styles.wrapper}>
           <View style={styles.header}>
             <Text style={styles.title}>{feed.title}</Text>
@@ -107,7 +108,7 @@ class HomeScreen extends Component {
   render() {
     return (
       <ScrollView style={styles.scrollView}>
-        {this.state.feeds.map((feed) => { return this._renderFeed(feed) })}
+        {this.state.feeds.map((feed, i) => { return this._renderFeed(feed, i) })}
       </ScrollView>
     );
   }
@@ -116,7 +117,7 @@ class HomeScreen extends Component {
 var styles = StyleSheet.create({
   scrollView: {
     flex: 1,
-    backgroundColor: '#FCE4EC'
+    backgroundColor: '#B3E5FC'
   },
   wrapper: {
     paddingTop: 20,
