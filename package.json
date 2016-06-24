@@ -13,5 +13,8 @@
     "react-native-audioplayer": "^0.2.0",
     "react-native-button": "^1.6.0",
     "react-native-fs": "^1.5.1"
+  },
+  "devDependencies": {
+    "jest-cli": "^13.0.0"
   }
 }
