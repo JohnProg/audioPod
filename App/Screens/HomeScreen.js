@@ -117,7 +117,7 @@ class HomeScreen extends Component {
 var styles = StyleSheet.create({
   scrollView: {
     flex: 1,
-    backgroundColor: '#B3E5FC'
+    backgroundColor: '#FAFAFA'
   },
   wrapper: {
     paddingTop: 20,

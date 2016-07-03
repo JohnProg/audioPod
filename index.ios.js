@@ -14,6 +14,7 @@ import {
 
 import HomeScreen from './App/Screens/HomeScreen';
 import ManualAddFeed from './App/Screens/ManualAddFeed';
+import DlWebView from './App/Screens/DlWebView';
 import LocalStorage from './App/Stores/LocalStorage';
 import DownloadedStore from './App/Stores/DownloadedStore';
 import PlusButtonImage from 'image!NavBarButtonPlus';
@@ -43,6 +44,13 @@ class audioPod extends React.Component{
           component: HomeScreen,
           title: 'AudioPod',
           backButtonTitle: 'Back',
+          leftButtonIcon: PlusButtonImage,
+		      onLeftButtonPress: () => {
+            this.refs.mainNav.navigator.push({
+              component: DlWebView,
+              title: 'DlNet',
+            });
+	        },
           rightButtonIcon: PlusButtonImage,
           onRightButtonPress: () => {
             this.refs.mainNav.navigator.push({

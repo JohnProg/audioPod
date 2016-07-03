@@ -70,10 +70,10 @@ var styles = StyleSheet.create({
     backgroundColor: '#F5FCFF',
   },
   input: {
-    height: 40, 
+    height: 40,
     padding: 5,
     margin: 10,
-    borderColor: 'gray', 
+    borderColor: 'gray',
     borderWidth: 1
   },
   buttonText: {
